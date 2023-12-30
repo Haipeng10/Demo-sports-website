@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="data-form">
+        <div class="container">
+            <form action="/memberships/new" method="post" class="fs-2">
+                <h2>New Membership:</h2>
+                <div class="mb-3">
+                    <label for="type" class="form-label">Type</label>
+                    <input type="text" class="form-control fs-3" name="type" id="type" placeholder="Type" required />
+                </div>
+                <div class="mb-3">
+                    <label for="duration" class="form-label">Duration (days)</label>
+                    <input type="number" class="form-control fs-3" name="duration" id="duration" placeholder="Duration" required />
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control fs-3" name="price" id="price" placeholder="Price" required />
+                </div>
+                <button type="submit" class="btn btn-primary fs-3 mb-3">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

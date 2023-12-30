@@ -1,0 +1,432 @@
+/*imported fonts*/
+@font-face {
+    font-family: 'Chronicle Black';
+    src: url('/fonts/black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Chronicle Roman';
+    src: url('/fonts/roman.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Chronicle Italic';
+    src: url('/fonts/italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Chronicle Semibold';
+    src: url("/fonts/semibold.otf") format('opentype');
+}
+
+nav {
+    font-family: 'Chronicle Semibold', Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(0, 52, 120);
+}
+
+.sign-in-bar {
+    
+    margin-top: 1%;
+    margin-left: 2%;
+    background-color: rgba(0, 52, 120, 0.5);
+    color: white;
+    margin-right: 1%;
+}
+
+.sign-in-bar a{
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.login-name {
+    font-size: 22px;
+    color: white;
+}
+
+.my-nav-item {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    margin: -17px 0 0 4vw;
+}
+
+.toggler-icon {
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.my-nav-item:hover {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(221, 221, 221, 0.5);
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 0.25rem;
+    text-underline-offset: 0.4rem;
+}
+
+/* .card {
+    width: 20rem;
+} */
+
+body {
+  color: #333;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+
+}
+
+header {
+    /* background-image: url(https://www.brandeis.edu/images/judge.jpg); */
+    background-image: url("https://bloximages.newyork1.vip.townnews.com/thecentersquare.com/content/tncms/assets/v3/editorial/5/ff/5ff17902-8604-11ed-a6fe-43d7aedf494e/63ab1ecf6b7cc.image.jpg?resize=1476%2C830");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    filter: brightness(120%);
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    padding: 2%;
+    padding-bottom: 8%;
+    color: rgb(0, 52, 120);
+}
+
+@media (max-width: 767px) {
+    .title-container {
+      display: none;
+    }
+
+    .big-title {
+        display: none;
+      }
+    
+    .title {
+        display: none;
+    }
+    
+    .logo {
+      display: block;
+    }
+    .card-group {
+        display: block;
+    }
+  }
+  
+
+/*header brandeis logo*/
+.logo {
+    height: 160px;
+    width: auto;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-top: 0.5%;
+}
+
+footer {
+    background-color: rgb(0, 52, 120);  
+}
+
+footer p {
+    padding: 0.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color:transparent;
+    padding-left: 10px;
+}
+
+main {
+    display: flexbox;
+    justify-content: space-between;
+    font-family: 'Chronicle Roman';
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+main article {
+    padding: 20px;
+    margin-left: 2%;
+    /* margin-right: 30%; */
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*big title*/
+.big-title {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Chronicle Semibold', Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+
+/*title*/
+.title {
+    font-family: 'Chronicle Roman', Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+/*subtitle*/
+.subtitle {
+    font-family: 'Chronicle Semibold', Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+}
+
+b {
+    font-family: 'Chronicle Semibold', Georgia, 'Times New Roman', Times, serif;
+}
+
+.content {
+    text-align: justify;
+    font-family: 'Chronicle Roman';
+    font-size: 20px;
+}
+
+/*main text content*/
+.main-content {
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /* margin-right: 10%; */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*side column*/
+.side {
+    width: 30%;
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    padding: 10px;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 10%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* For the images in events */
+.card-title {
+    margin: 0 0 15px 0;
+}
+
+#smallImg {
+    height: 333.5px;
+}
+
+/* Hides the text in the collapse */
+.collapse {
+    overflow: hidden;
+}
+
+.mb-0.h1 {
+    text-align: center;
+}
+
+/* Changes the size of the image in facilities */
+.card-img-top1 {
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-title {
+    font-family: 'Chronicle Black';
+}
+
+/* Image for the facilities */
+.card.noHover img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 90%;
+    margin-top: 40px;
+    border: 2px solid black
+}
+
+/* Designs the video */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+/* Designs the container for the video */
+.image-container {
+    position: relative;
+}
+
+/* Designs the text for the image */
+.image-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Designs the image text for h2 */
+.image-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Designs the image text for paragraph*/
+.image-text p {
+    font-size: 1.2em;
+}
+
+.fs-4 {
+    font-family: 'Chronicle Semibold';
+}
+
+.fs-5 {
+    font-family: 'Chronicle Roman';
+}
+
+.display-1 {
+    font-family: 'Chronicle Semibold';
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+/* Designs the card images */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+  /* Makes certain elements block display */
+  .athletics {
+    display: block;
+  }
+
+  /* Designs the section */
+  section {
+    margin: 30px 0 40px 0;
+    text-align: center;
+  }
+
+  /* Designs the h1 only in the section */
+  .h1 {
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 0 0 0;
+  }
+
+  /* Designs the h2 only in the section */
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  /* Designs the section image */
+  section img {
+      width: 70%;
+      margin: 20px 0 30px 0;
+      border: 5px solid black;
+  }
+
+  /* Designs the list */
+  section ul {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+
+  /* Accounts for screen resizing */
+  @media screen and (max-width: 900px) {
+    section ul {
+      width: 100%;
+    }
+}
+
+/* Designs the unordered lists */
+ul {
+  margin: 20px 0 20px 0;
+}
+
+/* Makes some of the facilities page block */
+.athletics {
+    display: block;
+}
+
+.noHover:hover {
+    transform: none;
+    transition: none;
+}
+
+/* Aligns the alert text to be centered */
+.alert {
+    text-align: center;
+}
+
+/* Creates margins for the card body */
+.card-body {
+    margin: -10px 0 0 0;
+}
+
+/* Centers the class title */
+.card-title {
+    text-align: center;
+}
+
+/* Designs the list group */
+.list-group {
+    text-align: center;
+}

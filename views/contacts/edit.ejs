@@ -1,0 +1,30 @@
+<div class="container">
+<div class="data-form">
+    <div class="container">
+        <form action="<%=`/contacts/${contact._id}/update?_method=PUT`%>" class="fs-2" method="POST">
+            <h2>Edit Contact:</h2>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control fs-3" name="name" id="name" placeholder="Name" autofocus
+                    value="<%= contact.name %>" required />
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control fs-3" name="email" id="email" value="<%= contact.email %>"
+                    placeholder="Email" required />
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control fs-3" name="title" id="title" value="<%= contact.title %>"
+                    placeholder="Title" required />
+            </div>
+            <div class="mb-3">
+                <label for="issue" class="form-label">Issue</label>
+                <textarea class="form-control fs-3" name="issue" id="issue" rows="4"
+                    placeholder="Issue" required><%= contact.issue %></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary fs-3 mb-3">Update</button>
+        </form>
+    </div>
+</div>
+</div>

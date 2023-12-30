@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-md" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler-icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto fs-5">
+                <li class="nav-item">
+                    <a class="nav-link my-nav-item" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link my-nav-item" href="/facilities">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link my-nav-item" href="/programs">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link my-nav-item" href="/events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link my-nav-item" href="/memberships">Membership</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link my-nav-item" href="/contacts/new">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="fs-5 sign-in-bar d-flex align-items-center justify-content-end">
+            <% if (loggedIn) { %>
+                <p> 
+                    <a class="login-name" href="<%=`/users/${currentUser._id}`%>">
+                        <u><%= currentUser.name %></u>
+                    </a> 
+                    <a href="/users/logout" class="btn btn-lg btn-primary ms-2">Log out</a>
+                </p>
+                <% } else { %>
+                <p>
+                    <a class="btn btn-lg btn-primary mx-2" href="/users/login">Sign In</a>
+                    <a class="btn btn-lg btn-primary mx-1" href="/users/new">Sign up</a>
+                </p>
+            <% } %>
+        </div>
+    </div>
+</nav>

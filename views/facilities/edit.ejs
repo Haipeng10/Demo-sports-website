@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="data-form">
+      <div class="container">
+          <form action="<%=`/facilities/${facility._id}/update?_method=PUT`%>" method="post" class="fs-2">
+              <h2>Edit Facility:</h2>
+              <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control fs-3" name="name" id="name" placeholder="Name" 
+                  value="<%= facility.name %>" required />
+              </div>
+              <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <input type="text" class="form-control fs-3" name="type" id="type" placeholder="Type" 
+                value="<%= facility.type %>" required />
+            </div>
+              <div class="mb-3">
+                  <label for="description" class="form-label">Description</label>
+                  <input type="text" class="form-control fs-3" name="description" id="description" placeholder="Description" 
+                  value="<%= facility.description %>" required />
+              </div>
+             
+              <button type="submit" class="btn btn-primary fs-3 mb-3">Submit</button>
+          </form>
+      </div>
+  </div>
+</div>

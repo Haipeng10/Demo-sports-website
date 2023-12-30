@@ -1,0 +1,39 @@
+<div class="container my-3 fs-3">
+    <h2>Membership Packages</h2>
+    <div class="row">
+        <% memberships.forEach(membership => { %>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title"><%= membership.type %></h2>
+                        <p class="card-text"><strong>Duration: </strong><%= membership.duration %> days</p>
+                        <p class="card-text"><strong>Price: </strong>$<%= membership.price %></p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center">
+                        <% if (loggedIn) { %> 
+                        <form method="post" action="/memberships/<%= membership._id %>/buy" class="me-2">
+                            <button type="submit" class="btn btn-lg btn-primary">Buy Membership</button>
+                        </form>
+                        <% } else { %>
+                            <p class="text-muted">Please log in to buy a membership</p>
+                        <% } %>
+                        <% if (currentUser && currentUser.isAdmin) { %> 
+                            <form method="get" action="/memberships/<%= membership._id %>/edit" class="me-2">
+                                <button type="submit" class="btn btn-lg  btn-warning">Edit</button>
+                            </form>
+
+                            <form method="post" action="/memberships/<%= membership._id %>/delete" class="me-2"">
+                                <button type="submit" class="btn btn-lg btn-danger">Delete</button>
+                            </form>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+        <div>
+            <% if (currentUser && currentUser.isAdmin) {%>
+                <a href="/memberships/new" class="btn btn-lg btn-success">Add a membership package</a>
+            <% }; %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="data-form">
+        <div class="container">
+            <form action="<%=`/memberships/${membership._id}/update?_method=PUT`%>" class="fs-2" method="POST">
+                <h2>Edit Membership:</h2>
+                <div class="mb-3">
+                    <label for="type" class="form-label">Type</label>
+                    <input type="text" class="form-control fs-3" name="type" id="type" placeholder="Type" autofocus
+                        value="<%= membership.type %>" required />
+                </div>
+                <div class="mb-3">
+                    <label for="duration" class="form-label">Duration (days)</label>
+                    <input type="number" class="form-control fs-3" name="duration" id="duration" value="<%= membership.duration %>"
+                        placeholder="Duration" required />
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control fs-3" name="price" id="price" value="<%= membership.price %>"
+                        placeholder="Price" required />
+                </div>
+                <button type="submit" class="btn btn-primary fs-3 mb-3">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

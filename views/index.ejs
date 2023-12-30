@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index-style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+
+      <div class="row">
+        <div class="column">
+          <div class="image-container">
+            <img src="https://www.brandeis.edu/images/judge.jpg" width="100%" height="auto" alt="your-image-description">
+            <div class="image-text">
+              <h2>Welcome to Brandeis Sports Complex!</h2>
+            </div>
+          </div>
+        <br>
+            <!-- <img src="https://www.brandeis.edu/images/judge.jpg" width="100%" alt="your-image-description" style="height: auto;"> -->
+        </div>
+      </div>
+
+      
+        <!-- 1 -->
+        <div class="row">
+          <div class="column">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/QT-I97byp6Y" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          </div>
+
+            <div class="column">
+                <h2 class="sub-title">Brandeis University Sports Complex: Excellence in Athletics and Recreation</h2>
+                <p>The Brandeis University Sports Complex is a top-notch facility situated within the beautiful campus of Brandeis University. This modern complex is dedicated to promoting physical fitness, wellness, and competitive sports among students, faculty, staff, and the local community.</p>
+                <p>Featuring a wide range of amenities and resources, the sports complex offers everything you need to stay active and engaged in various recreational activities. Some of the key facilities include a fully-equipped fitness center, an indoor swimming pool, basketball and tennis courts, a multi-purpose sports field, and a running track.</p>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="container my-3">
+          <h2>Programs</h2>
+          <table class="table table-striped table-bordered table-hover">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Schedule</th>
+                      <th>Instructor</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <% programs.forEach(program => { %>
+                      <tr>
+                          <td><%= program.name %></td>
+                          <td><%= program.description %></td>
+                          <td><%= program.schedule %></td>
+                          <td><%= program.instructor %></td>
+                      </tr>
+                  <% }); %>
+              </tbody>
+          </table>
+        </div>
+
+        <br>
+        <div class="container my-3">
+          <h2>Facilities</h2>
+          <table class="table table-striped table-bordered table-hover">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <% facilities.forEach(facility => { %>
+                      <tr>
+                          <td><%= facility.name %></td>
+                          <td><%= facility.type %></td>
+                          <td><%= facility.description %></td>
+                      </tr>
+                  <% }); %>
+              </tbody>
+          </table>
+        </div>
+
+        <br>
+        <div class="container my-3">
+          <h2>Ongoing Events</h2>
+          <table class="table table-striped table-bordered table-hover">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Date</th>
+                      <th>Location</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <% events.forEach(event => { %>
+                      <tr>
+                          <td><%= event.name %></td>
+                          <td><%= event.description %></td>
+                          <td><%= event.date %></td>
+                          <td><%= event.location %></td>
+                      </tr>
+                  <% }); %>
+              </tbody>
+          </table>
+        </div>
+
+        <br>
+        <div class="container my-3">
+          <h2>Current Membership Packages</h2>
+          <table class="table table-striped table-bordered table-hover">
+              <thead>
+                  <tr>
+                      <th>Type</th>
+                      <th>Duration (days)</th>
+                      <th>Price</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <% memberships.forEach(membership => { %>
+                      <tr>
+                          <td><%= membership.type %></td>
+                          <td><%= membership.duration %></td>
+                          <td>$<%= membership.price %></td>
+                      </tr>
+                  <% }); %>
+              </tbody>
+          </table>
+        </div>
+
+        <!-- 5 -->
+        <div class="row">
+          <h2 class="sub-title">Location</h2>
+            <div class="column">
+              <div class="video-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d336.34990239692775!2d-71.25599295514556!3d42.36536991045191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e38317b2a735b1%3A0x154d76f27b276a85!2sGosman%20Sports%20and%20Convocation%20Center!5e0!3m2!1szh-CN!2sus!4v1678897011405!5m2!1szh-CN!2sus" width=""  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+              </div>
+              </div>
+
+            <div class="column">
+              <p >
+                Address: 415 South St, Waltham, MA 02453
+              </p>
+              <br>
+              <p>The parking lot is located near the Sports Center and is available for use by students and visitors. There are two designated areas within the parking lot: a yellow zone for student use and a green zone for visitors and non-affiliates. The parking lot uses standard parking spaces and does not have reserved spaces for individuals with disabilities.
+              </p>
+              <p>
+              Parking is limited, so it is recommended to plan ahead and allocate enough time to find a parking space. If unable to find parking near the Sports Center, alternative parking options may be available on campus or in nearby areas.</p>
+          </div>
+        </div>
+
+
+
+      
+  
+    </div>
+</body>
+</html>

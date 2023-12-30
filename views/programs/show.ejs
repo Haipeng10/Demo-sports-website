@@ -1,0 +1,29 @@
+<h1>Program Data for <%= program.name %></h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <td><%= program.name %></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><%= program.description %></td>
+  </tr>
+  <tr>
+    <th>Schedule</th>
+    <td><%= program.schedule %></td>
+  </tr>
+  <tr>
+    <th>Intructor</th>
+    <td><%= program.instructor %></td>
+  </tr>
+</table>
+
+<div>
+  <a href="/programs">View all programs</a>
+</div>
+<div>
+  <a href="<%=`/programs/${program._id}/edit`%>">Edit program Details</a>
+</div>
+<div>
+  <a href="<%= `/programs/${program._id}/delete?_method=DELETE` %>" onclick="return confirm('Are you sure you want to delete this record?')">Delete</a>
+</div>

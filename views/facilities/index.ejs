@@ -1,0 +1,33 @@
+<div class="container my-3 fs-3">
+  <h2>Facilities</h2>
+  <div class="row">
+      <% facilities.forEach(facility => { %>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                      <h2 class="card-title"><%= facility.name %></h2>
+                      <p class="card-text"><strong>Type: </strong><%= facility.type %></p>
+                      <p class="card-text"><strong>Description: </strong><%= facility.description %></p>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center">
+                      <% if (currentUser && currentUser.isAdmin) { %> 
+                          <a href="<%=`/facilities/${facility._id}/edit` %>"
+                            class="btn btn-lg btn-warning me-2"
+                            > Edit </a>
+                          <a
+                          href="<%= `/facilities/${facility._id}/delete?_method=DELETE` %>"
+                          onclick="return confirm('Are you sure you want to delete this record?')"
+                          class="btn btn-lg btn-danger me-2"
+                          >Delete</a>
+                      <% } %>
+                  </div>
+              </div>
+          </div>
+      <% }); %>
+      <div>
+          <% if (currentUser && currentUser.isAdmin) {%>
+              <a href="/facilities/new" class="btn btn-lg btn-success">Add A Facility</a>
+          <% }; %>
+      </div>
+  </div>
+</div>
